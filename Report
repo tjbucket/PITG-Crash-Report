@@ -1,0 +1,199 @@
+---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 10/25/20 10:20 PM
+Description: Unexpected error
+
+java.lang.UnsupportedOperationException: No bounds for empty shape.
+	at net.minecraft.util.math.shapes.VoxelShape.func_197752_a(SourceFile:48) ~[?:?] {re:classloading,re:mixin}
+	at mod.grimmauld.windowlogging.WindowInABlockBlock.addBlockHitEffects(WindowInABlockBlock.java:58) ~[?:mc1.16.3_v0.0.2] {re:classloading}
+	at mod.grimmauld.windowlogging.WindowInABlockBlock.addHitEffects(WindowInABlockBlock.java:305) ~[?:mc1.16.3_v0.0.2] {re:classloading}
+	at net.minecraftforge.common.extensions.IForgeBlockState.addHitEffects(IForgeBlockState.java:358) ~[?:?] {re:classloading,re:mixin}
+	at net.minecraft.client.particle.ParticleManager.addBlockHitEffects(ParticleManager.java:453) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_147115_a(Minecraft.java:1257) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_184117_aA(Minecraft.java:1607) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1437) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:930) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:584) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) [forge-1.16.3-34.1.22.jar:34.1] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$460/1689723487.call(Unknown Source) [forge-1.16.3-34.1.22.jar:34.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-7.0.1.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-7.0.1.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-7.0.1.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-7.0.1.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-7.0.1.jar:?] {re:classloading}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.util.math.shapes.VoxelShape.func_197752_a(SourceFile:48) ~[?:?] {re:classloading,re:mixin}
+	at mod.grimmauld.windowlogging.WindowInABlockBlock.addBlockHitEffects(WindowInABlockBlock.java:58) ~[?:mc1.16.3_v0.0.2] {re:classloading}
+	at mod.grimmauld.windowlogging.WindowInABlockBlock.addHitEffects(WindowInABlockBlock.java:305) ~[?:mc1.16.3_v0.0.2] {re:classloading}
+	at net.minecraftforge.common.extensions.IForgeBlockState.addHitEffects(IForgeBlockState.java:358) ~[?:?] {re:classloading,re:mixin}
+	at net.minecraft.client.particle.ParticleManager.addBlockHitEffects(ParticleManager.java:453) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_147115_a(Minecraft.java:1257) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_184117_aA(Minecraft.java:1607) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 2 total; [ClientPlayerEntity['tjbuckeye'/64351, l='ClientLevel', x=-4.48, y=87.94, z=-559.62], RemoteClientPlayerEntity['just13ducks'/347, l='ClientLevel', x=43.31, y=88.12, z=-488.62]]
+	Chunk stats: Client Chunk Cache: 961, 698
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-80,86,-524), Chunk: (at 0,5,4 in -5,-33; contains blocks -80,0,-528 to -65,255,-513), Region: (-1,-2; contains chunks -32,-64 to -1,-33, blocks -512,0,-1024 to -1,255,-513)
+	Level time: 4012973 game time, 34783 day time
+	Server brand: forge
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.func_72914_a(ClientWorld.java:447) ~[?:?] {re:classloading,pl:runtimedistcleaner:A,re:mixin,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:1974) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:605) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) [forge-1.16.3-34.1.22.jar:34.1] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$460/1689723487.call(Unknown Source) [forge-1.16.3-34.1.22.jar:34.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-7.0.1.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-7.0.1.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-7.0.1.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-7.0.1.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-7.0.1.jar:?] {re:classloading}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.3
+	Minecraft Version ID: 1.16.3
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 833015392 bytes (794 MB) / 4256169984 bytes (4059 MB) up to 6203899904 bytes (5916 MB)
+	CPUs: 8
+	JVM Flags: 5 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx6656m -Xms256m -XX:PermSize=256m
+	ModLauncher: 7.0.1+78+master.e9771d8
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.3-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.3-34.1.22.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.3-34.1.22.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.3-34.1.22.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.3-34.1.22.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.3-34.1.22.jar fml TRANSFORMATIONSERVICE 
+	FML: 34.1
+	Forge: net.minecraftforge:34.1.22
+	FML Language Providers: 
+		javafml@34.1
+		minecraft@1
+	Mod List: 
+		SlimyBoyos-3.1.0.8.jar SlimyBoyos {slimyboyos@3.1.0.8 DONE}
+		NetherPortalFix_1.16.3-7.2.0.jar NetherPortalFix {netherportalfix@7.2.0 DONE}
+		mining-helmet-1.16.3-1.0.9.jar Mining Helmet {mining_helmet@1.0.9 DONE}
+		craftingstation-4.1.1.jar Crafting Station {craftingstation@4.1.1 DONE}
+		spiders-2.0-1.16.3-1.0.3.jar Spiders 2.0 {spiderstpo@1.0.3 DONE}
+		jei-1.16.3-7.6.0.49.jar Just Enough Items {jei@7.5.0.43 DONE}
+		mcw-windows-1.0.2-mc1.16.3.jar Macaw's Windows {mcwwindows@1.0.2 DONE}
+		caelus-forge-1.16.3-2.0.0.3.jar Caelus API {caelus@1.16.3-2.0.0.3 DONE}
+		torohealth-1.16.3-forge-2.jar ToroHealth {torohealth@NONE DONE}
+		windowlogging-mc1.16.3_v0.0.2.jar Windowlogging {windowlogging@0.0.2 DONE}
+		reap-1.16.3-1.0.2.jar Reap Mod {reap@1.16.3-1.0.2 DONE}
+		KleeSlabs_1.16.3-9.2.0.jar KleeSlabs {kleeslabs@9.2.0 DONE}
+		colytra-forge-1.16.3-5.0.0.1.jar Colytra {colytra@1.16.3-5.0.0.1 DONE}
+		pitg-1.16.3-1.4.1.jar Pane In The Glass {pitg@1.16.3-1.4.1 DONE}
+		invtweaks-1.16.2-1.0.0.jar Inventory Tweaks Renewed {invtweaks@1.16.2-1.0.0 DONE}
+		BetterCaves-1.16.2-1.0.3.jar YUNG's Better Caves {bettercaves@1.16.2-1.0.3 DONE}
+		Clumps-6.0.0.11.jar Clumps {clumps@6.0.0.11 DONE}
+		light-overlay-5.5.3.jar Light Overlay Forge {lightoverlay-forge@NONE DONE}
+		JRFTL [1.16.3]-1.1.jar JRFTL {jrftl@1.1 DONE}
+		CookingForBlockheads_1.16.3-9.2.1.jar Cooking for Blockheads {cookingforblockheads@9.2.1 DONE}
+		ReAuth-1.16-Forge-3.9.2.jar ReAuth {reauth@3.9.2 DONE}
+		comforts-forge-1.16.3-4.0.0.1.jar Comforts {comforts@1.16.3-4.0.0.1 DONE}
+		ftb-gui-library-1603.1.1.24.jar FTB GUI Library {ftbguilibrary@1603.1.1.24 DONE}
+		decorative_blocks-1.16.1-1.5.jar Decorative Blocks {decorative_blocks@1.5 DONE}
+		charginggadgets-1.3.0.jar Charging Gadgets {charginggadgets@1.3.0 DONE}
+		Bookshelf-1.16.3-8.5.17.jar Bookshelf {bookshelf@8.5.17 DONE}
+		guardvillagers-1.16.3-1.1.5.jar Guard Villagers {guardvillagers@1.1.5 DONE}
+		u_team_core-1.16.3-3.1.10.183.jar U Team Core {uteamcore@3.1.10.183 DONE}
+		colorfulcampfires-1.0-1.16.2.jar Colorful Campfires {colorfulcampfires@1.0-1.16.2 DONE}
+		buildinggadgets-3.7.1.jar Building Gadgets {buildinggadgets@3.7.1 DONE}
+		mcw-doors-1.0.1fix-mc1.16.3-1.16.2.jar Macaw's Doors {mcwdoors@1.0.1 DONE}
+		Morpheus-1.16.3-4.2.63.jar Morpheus {morpheus@4.2.63 DONE}
+		mapperbase-1.16.3-2.1.0.1.jar Mapper Base {mapperbase@1.16.3-2.1.0.1 DONE}
+		Hwyla-forge-1.10.11-B78_1.16.2 (1).jar Waila {waila@1.10.11-B78_1.16.2 DONE}
+		walljump-forge-1.16.3-1.3.6.jar Wall-Jump! {walljump@1.16.3-1.3.6 DONE}
+		iChunUtil-1.16.3-10.0.0.jar iChunUtil {ichunutil@10.0.0 DONE}
+		JustEnoughResources-1.16.3-0.12.0.102.jar Just Enough Resources {jeresources@0.12.0.102 DONE}
+		forge-1.16.3-34.1.22-universal.jar Forge {forge@34.1.22 DONE}
+		Waddles-1.16.3-0.8.9.jar Waddles {waddles@1.16.3-0.8.9 DONE}
+		MmmMmmMmmMmm-1.16-1.0.1.jar MmmMmmMmmMmm {dummmmmmy@1.0.1 DONE}
+		Upgraded Netherite 1.16.3 - 1.6.0.jar Upgraded Netherite {upgradednetherite@1.6.0 DONE}
+		forge-1.16.3-34.1.22-client.jar Minecraft {minecraft@1.16.3 DONE}
+		mcw-bridges-1.0.4-mc1.16.3.jar Macaw's Bridges {mcwbridges@1.0.4 DONE}
+		useful_backpacks-1.16.3-1.11.6.83.jar Useful Backpacks {usefulbackpacks@1.11.6.83 DONE}
+		repurposed_structures-1.16.3-2.2.9.jar Repurposed Structures {repurposed_structures@1.16.3-2.2.9 DONE}
+		EnchantmentDescriptions-1.16.3-5.0.1.jar EnchantmentDescriptions {enchdesc@5.0.1 DONE}
+		swingthroughgrass-1.16.3-1.5.2.jar SwingThroughGrass {swingthroughgrass@1.16.3-1.5.2 DONE}
+		embellishcraft-1.16.3-3.1.0.1.jar EmbellishCraft {embellishcraft@1.16.3-3.1.0.1 DONE}
+		AmbientSounds_v3.0.21_mc1.16.2.jar Ambient Sounds {ambientsounds@3.0.3 DONE}
+		MouseTweaks-2.13-mc1.16.2.jar Mouse Tweaks {mousetweaks@2.13 DONE}
+		BiomesOPlenty-1.16.3-12.0.0.409-universal.jar Biomes O' Plenty {biomesoplenty@1.16.3-12.0.0.409 DONE}
+		valhelsia_structures-16.0.5.jar Valhelsia Structures {valhelsia_structures@16.0.5 DONE}
+		pamhc2crops-1.16.3-1.0.1.jar Pam's HarvestCraft 2 Crops {pamhc2crops@version DONE}
+		CreativeCore_v2.0.7_mc1.16.2.jar CreativeCore {creativecore@2.0.0 DONE}
+		memeloadscreen-2.0.0.0.jar JoJo Meme Loadscreen {memeloadscreen@2.0.0.0 DONE}
+		GeneticAnimals-0_6_2.jar Genetic Animals {eanimod@0_6_2 DONE}
+		goprone-1.16.3-1.3.5 (1).jar GoProne {goprone@1.16.3-1.3.5 DONE}
+		pamhc2foodcore-1.16.3-1.0.0.jar Pam's HarvestCraft 2 Food Core {pamhc2foodcore@version DONE}
+		gravestone-1.16.3-2.0.3.jar Gravestone Mod {gravestone@1.16.3-2.0.3 DONE}
+		collective-1.16.3-1.53.jar Collective {collective@1.53 DONE}
+		cakechomps-forge-1.16.3-5.0.0.1.jar Cake Chomps {cakechomps@1.16.3-5.0.0.1 DONE}
+		extratags-2.2.jar Extra Tags {extratags@2.2 DONE}
+		DramaticDoors-1.16.3-1.1.0.jar Dramatic Doors {dramaticdoors@1.16.3-1.1.0 DONE}
+		sit-1.16.2-v1.3.jar Sit {sit@v1.3 DONE}
+		WorldPreGenerator-1.16.3-1.0.0.jar World Pre Generator {world_pre_generator@1.0.0 DONE}
+		DoubleSlabs-1.16-3.4.10 (1).jar Double Slabs {doubleslabs@3.4.10 DONE}
+		lanterncolors-1.16.3-2.1.1.jar Lantern Colors {lanterncolors@1.16.2-2.1.1 DONE}
+		AmbientEnvironment-4.0.0.4.jar Ambient Environment {ambientenvironment@4.0.0.4 DONE}
+		worldedit-forge-mc1.16.3-7.2.0-rc2-dist.jar WorldEdit {worldedit@7.2.0-rc2+a615e01 DONE}
+		mcws-roofs-1.16.3-v2.0.0.jar Macaw's Roofs {mcwroofs@2.0.0 DONE}
+		cfm-7.0.0-pre19-mc1.16.3.jar MrCrayfish's Furniture Mod {cfm@7.0.0-pre19 DONE}
+		AppleSkin-mc1.16.2-forge-1.0.14.jar AppleSkin {appleskin@1.0.14 DONE}
+		BackTools-1.16.3-10.0.0.jar Back Tools {backtools@10.0.0 DONE}
+		ItemPhysic_v1.4.6_mc1.16.2 (1).jar ItemPhysic {itemphysic@1.6.0 DONE}
+		cloth-config-forge-4.1.0.jar Cloth Config v4 API {cloth-config@4.0 DONE}
+		easyelytrato_1.16.3_1.5.jar Easy Elytra Takeoff {easyelytrato@1.5 DONE}
+		trashcans-1.0.3-mc1.16.3.jar Trash Cans {trashcans@1.0.3 DONE}
+		Aquaculture-1.16.3-2.1.2.jar Aquaculture 2 {aquaculture@1.16.3-2.1.2 DONE}
+		TrampleStopper-2.2.0+build.1.mcVersion.1.16.3.jar Trample Stopper {tramplestopper@2.2.0+build.1.mcVersion.1.16.3 DONE}
+		forgemod_VoxelMap-1.10.11_for_1.16.3.jar VoxelMap {voxelmap@1.10.11 DONE}
+		bwncr-1.16.3-3.8.15.jar Bad Wither No Cookie Reloaded {bwncr@1.16.3-3.8.15 DONE}
+		FastLeafDecay-v25.jar FastLeafDecay {fastleafdecay@v25 DONE}
+		CosmeticArmorReworked-1.16.3-v1 (1).jar CosmeticArmorReworked {cosmeticarmorreworked@1.16.3-v1 DONE}
+		SoundFilters-0.14_for_1.16.2.jar Sound Filters {soundfilters@0.14_for_1.16.2 DONE}
+		BetterMineshaftsForge-1.16.2-1.0.jar YUNG's Better Mineshafts {bettermineshafts@1.16.2-1.0 DONE}
+		WailaHarvestability-mc1.16.2-forge-1.1.13.jar Waila Harvestability {wailaharvestability@1.1.13 DONE}
+		BetterAdvancements-1.16.3-0.1.0.102.jar Better Advancements {betteradvancements@0.1.0.102 DONE}
+	Crash Report UUID: 1c67615b-37d9-45c6-95ce-b7fe118a10aa
+	Launched Version: forge-34.1.22
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: GeForce GTX 970/PCIe/SSE2 GL version 4.6.0 NVIDIA 456.71, NVIDIA Corporation
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: vanilla, mod_resources
+	Current Language: English (US)
+	CPU: 8x Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
